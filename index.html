@@ -2,9 +2,349 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>100度</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="shorcut icon" href="images/logo.ico"/>
+    <!--[if IE 6]>
+    <script src="js/DD_belatedPNG_0.0.8a.js"></script>
+    <script>
+        DD_belatedPNG.fix('*');
+    </script>
+    <![endif]-->
+    <script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
+<div id="header" class="center gradient">
+    <p class="citys fl"><span>切换城市：</span><a class="active" href="#">北京</a><a href="#">上海</a><a href="#">福州</a><a href="#">广州</a><a href="#">青岛</a></p>
+    <p class="tools fr"><a href="">加盟100度</a><a href="">店铺管理</a></p>
+</div>
+<div id="nav" class="center">
+    <ul class="nav_style fl">
+        <li><a href="#" style="background-image: url(images/nav_style1.png);"><span>美食</span></a></li>
+        <li><a href="#" style="background-image: url(images/nav_style2.png);"><span>夜店</span></a></li>
+        <li><a href="#" style="background-image: url(images/nav_style3.png);"><span>购物</span></a></li>
+        <li><a href="#" style="background-image: url(images/nav_style4.png);"><span>文化</span></a></li>
+        <li><a href="#" style="background-image: url(images/nav_style5.png);"><span>休闲</span></a></li>
+    </ul>
+    <h1 class="logo">
+        <a href="#"><img src="images/logo.png" alt=""/></a>
+    </h1>
+    <ul class="nav_unit fr">
+        <li><a href="#" style="background-image: url(images/nav_style1.png);"><span>烧客空间</span></a></li>
+        <li><a href="#" style="background-image: url(images/nav_style1.png);"><span>知道分子</span></a></li>
+        <li><a href="#" style="background-image: url(images/nav_style2.png);"><span>白吃白拿</span></a></li>
+        <li><a href="#" style="background-image: url(images/nav_style3.png);"><span>烧客论坛</span></a></li>
+        <li><a href="#" style="background-image: url(images/nav_style4.png);"><span>企业俱乐部</span></a></li>
+    </ul>
+</div>
+<div id="search" class="center gradient">
+    <div class="search_wrap">
+        <div class="search_tip"></div>
+        <ul class="search_nav clear">
+            <li class="active">搜店</li>
+            <li>地址</li>
+            <li>优惠券</li>
+            <li>全文</li>
+            <li>视频</li>
+        </ul>
+       <div class="search_con">
+           <form action="#">
+               <input type="text" placeholder="例如：荷棠鱼坊烤鱼 或 樱花日本料理"/>
+               <input type="submit" class="gradient" value="搜索"/>
+           </form>
+           <p>金钱豹、大江南、湘水之珠、德瑀楼荷棠鱼坊烤鱼、SOHO尚都、湘味楼...</p>
+       </div>
+    </div>
 
+</div>
+<div id="content" class="wrap center">
+    <div class="main fl">
+        <div class="clear">
+            <div id="watch_hot" class="watch_hot fl section">
+                <h2>WHAT'HOT</h2>
+                <video id="video1" src="videos/test.mp4"></video>
+                <div class="video_bt">
+                    <input type="button" class="play_pause" value="▶"/>
+                    <input type="button" class="time_now" value="00:00:00"/>
+                    <input type="button" class="time_total" value="00:00:00"/>
+                    <input type="button" class="mute" />
+                    <div id="progresser_out">
+                        <div id="progresser_in"></div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="hot_new fr options">
+                <ul class="options_tab">
+                    <li class="options_tab_l active">
+                        <strong class="com_title"><span>HOT SHOP</span><em>红店铺</em></strong>
+                    </li>
+                    <li class="options_tab_r gradient">
+                        <strong class="com_title"><span>EW SHOP</span><em>新开张</em></strong>
+                    </li>
+                </ul>
+                <div class="options_con">
+                    <br/>
+                    页签内容页签内容页签内容页签内容页签内容
+                    页签内容页签内容页签内容页签内容页签内容
+                    页签内容页签内容页签内容页签内容页签内容
+                    页签内容页签内容页签内容页签内容页签内容
+                    页签内容页签内容页签内容页签内容页签内容
+                    页签内容页签内容页签内容页签内容页签内容
+                    页签内容页签内容页签内容页签内容页签内容
+                    页签内容页签内容页签内容页签内容页签内容
+                    页签内容页签内容页签内容页签内容页签内容
+                    页签内容页签内容页签内容页签内容页签内容
+                    页签内容页签内容页签内容页签内容页签内容
+                    页签内容页签内容页签内容页签内容页签内容
+                    页签内容页签内容页签内容页签内容页签内容
+                    页签内容页签内容页签内容页签内容页签内容
+                    页签内容页签内容页签内容页签内容页签内容
+                    页签内容页签内容页签内容页签内容页签内容
+                    <br/>
+                </div>
+            </div>
+        </div>
+        <div class="ad_one main_ad">
+            <a href="#"><img src="images/ad1.jpg" alt=""/></a>
+        </div>
+        <div class="clear">
+            <div class="section fl">section块</div>
+            <div class="section fr">options块</div>
+        </div>
+        <div class="clear">
+            <div class="section fr">
+            </div>
+            <div class="subway_map options  fl">
+                <ul class="options_tab">
+                    <li class="options_tab_l active">
+                        <strong class="com_title"><span>SUBWAY</span><em>地铁交通</em></strong>
+                    </li>
+                    <li class="options_tab_r gradient">
+                        <strong class="com_title"><span>MAP</span><em>生活圈</em></strong>
+                    </li>
+                </ul>
+                <div class="options_con">
+                    <br/>
+                    页签内容页签内容页签内容页签内容页签内容
+                    页签内容页签内容页签内容页签内容页签内容
+                    页签内容页签内容页签内容页签内容页签内容
+                    页签内容页签内容页签内容页签内容页签内容
+                    页签内容页签内容页签内容页签内容页签内容
+                    页签内容页签内容页签内容页签内容页签内容
+                    页签内容页签内容页签内容页签内容页签内容
+                    页签内容页签内容页签内容页签内容页签内容
+                    页签内容页签内容页签内容页签内容页签内容
+                    页签内容页签内容页签内容页签内容页签内容
+                    页签内容页签内容页签内容页签内容页签内容
+                    页签内容页签内容页签内容页签内容页签内容
+                    页签内容页签内容页签内容页签内容页签内容
+                    页签内容页签内容页签内容页签内容页签内容
+                    页签内容页签内容页签内容页签内容页签内容
+                    页签内容页签内容页签内容页签内容页签内容
+                    <br/>
+                </div>
+            </div>
+        </div>
+        <div class="main_ad">
+            <a href="#"><img src="images/ad1.jpg" alt=""/></a>
+        </div>
+        <div class="clear">
+            <div class="zhidao section fl">
+                <h2><strong class="com_title"><span>LIFESTYLE ADVICE </span><em>知道分子</em></strong> <span
+                        class="more"></span></h2>
+
+                <div class="options_sub">
+                    <ul class="options_sub_title">
+                        <li class="active">有人在问</li>
+                        <li class="gradient">有人知道</li>
+                        <li class="gradient">热门问题</li>
+                    </ul>
+                    <div class="options_sub_con">
+                        内容内容内容内容内容内容内容内容内容内容
+                        内容内容内容内容内容内容内容内容内容内容
+                        内容内容内容内容内容内容内容内容内容内容
+                        内容内容内容内容内容内容内容内容内容内容
+                        内容内容内容内容内容内容内容内容内容内容
+                        内容内容内容内容内容内容内容内容内容内容
+                        内容内容内容内容内容内容内容内容内容内容
+                        内容内容内容内容内容内容内容内容内容内容
+                    </div>
+                </div>
+            </div>
+            <div class="section fr">section块</div>
+        </div>
+        <div class="clear">
+            <div class="section fl">section块</div>
+            <div class="section fr">section块</div>
+        </div>
+    </div>
+    <div class="side fr">
+        <div class="login side_section">
+            <h2 class="gradient"><strong class="com_title"><span>LOAD</span><em>登录</em></strong></h2>
+
+            <form action="#">
+                <label for="username">用户名：<input type="text" name="username" id="username"/></label>
+                <label for="flagme"><input type="checkbox" name="flagme" id="flagme"/>记住我</label>
+                <label for="password">密&nbsp;&nbsp;&nbsp;&nbsp;码：<input type="password" name="password" id="password"/></label>
+                <input type="submit" name="submit" id="submit" value="登录"/>
+            </form>
+            <p><a class="regist_a" href=""><em>■</em><span>注册新用户</span></a> <a class="forget_a" href=""><em>■</em><span>忘记密码了</span></a>
+            </p>
+        </div>
+        <div class="side_ad1 side_section">
+            <a href="#"><img src="images/img1.png" alt=""/></a>
+        </div>
+        <div class="side_ad2 side_section">
+            <a href="#"><img src="images/img2.png" alt=""/></a>
+        </div>
+        <div class="qiangjuan side_section">
+            <h2 class="side_section_title"><strong class="com_title"><span>COUPONS</span><em>抢卷儿</em></strong> <span
+                    class="more"></span></h2>
+
+            <div class="options_sub">
+                <ul class="options_sub_title">
+                    <li class="active">人气</li>
+                    <li class="gradient">推荐</li>
+                    <li class="gradient">最新</li>
+                </ul>
+                <div class="options_sub_con">
+                    内容内容内容内容内容内容内容内容内容内容
+                    内容内容内容内容内容内容内容内容内容内容
+                    内容内容内容内容内容内容内容内容内容内容
+                    内容内容内容内容内容内容内容内容内容内容
+                    内容内容内容内容内容内容内容内容内容内容
+                    内容内容内容内容内容内容内容内容内容内容
+                    内容内容内容内容内容内容内容内容内容内容
+                    内容内容内容内容内容内容内容内容内容内容
+                </div>
+            </div>
+        </div>
+        <div class="tuijian side_section">
+            <h2 class="side_section_title"><strong class="com_title"><span>SHOP </span><em>今日推荐</em></strong> <span
+                    class="more"></span></h2>
+            <ul class="tuijian_list">
+                <li class="wrap">
+                    <a href="#"><img src="images/tuijian1.png" alt="推荐"/><span class="tuijian_flag"></span></a>
+
+                    <div>
+                        <h2>汉菜国际美食百汇</h2>
+
+                        <p><span>口味：</span>创意中餐</p>
+
+                        <p><span>区域：</span>朝阳/CBD</p>
+                    </div>
+                </li>
+                <li class="wrap">
+                    <a href="#"><img src="images/tuijian1.png" alt="推荐"/><span class="tuijian_flag"></span></a>
+
+                    <div>
+                        <h2>汉菜国际美食百汇</h2>
+
+                        <p><span>口味：</span>创意中餐</p>
+
+                        <p><span>区域：</span>朝阳/CBD</p>
+                    </div>
+                </li>
+                <li class="wrap">
+                    <a href="#"><img src="images/tuijian1.png" alt="推荐"/><span class="tuijian_flag"></span></a>
+
+                    <div>
+                        <h2>汉菜国际美食百汇</h2>
+
+                        <p><span>口味：</span>创意中餐</p>
+
+                        <p><span>区域：</span>朝阳/CBD</p>
+                    </div>
+                </li>
+                <li class="wrap">
+                    <a href="#"><img src="images/tuijian1.png" alt="推荐"/><span class="tuijian_flag"></span></a>
+
+                    <div>
+                        <h2>汉菜国际美食百汇</h2>
+
+                        <p><span>口味：</span>创意中餐</p>
+
+                        <p><span>区域：</span>朝阳/CBD</p>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+        <div class="quanjing side_section">
+            <h2 class="side_section_title"><strong class="com_title"><span>360º SHOP </span><em>全景逛店</em></strong> <span
+                    class="more"></span></h2>
+            <div class="carousel">
+                <ul>
+                    <li><a href=""><img src="images/quanjing1.jpg" alt=""/></a>
+                       </li>
+                    <li><a href=""><img src="images/quanjing1.jpg" alt=""/></a>
+                       </li>
+                    <li><a href=""><img src="images/quanjing1.jpg" alt=""/></a>
+                       </li>
+                </ul>
+                <p><a href="#">苹果雪梨排骨汤</a></p>
+            </div>
+        </div>
+        <div class="zhekou side_section">
+            <h2 class="side_section_title"><strong class="com_title"><span>SHOP  </span><em>折扣店</em></strong> <span
+                    class="more"></span></h2>
+            <ul class="tuijian_list">
+                <li class="wrap">
+                    <a href="#"><img src="images/tuijian1.png" alt="推荐"/><span class="tuijian_flag"></span></a>
+                    <div>
+                        <h2>汉菜国际美食百汇</h2>
+                        <p><span>口味：</span>创意中餐</p>
+                        <p><span>区域：</span>朝阳/CBD</p>
+                    </div>
+                </li>
+            </ul>
+            <ul class="dinpu">
+                <li><a href=""><i>■</i><em>[</em><span>休闲</span><em>]</em><small>翰茶缘（雍和宫店）</small></a></li>
+                <li><a href=""><i>■</i><em>[</em><span>休闲</span><em>]</em><small>翰茶缘（雍和宫店）</small></a></li>
+                <li><a href=""><i>■</i><em>[</em><span>休闲</span><em>]</em><small>翰茶缘（雍和宫店）</small></a></li>
+                <li><a href=""><i>■</i><em>[</em><span>休闲</span><em>]</em><small>翰茶缘（雍和宫店）</small></a></li>
+                <li><a href=""><i>■</i><em>[</em><span>休闲</span><em>]</em><small>翰茶缘（雍和宫店）</small></a></li>
+                <li><a href=""><i>■</i><em>[</em><span>休闲</span><em>]</em><small>翰茶缘（雍和宫店）</small></a></li>
+                <li><a href=""><i>■</i><em>[</em><span>休闲</span><em>]</em><small>翰茶缘（雍和宫店）</small></a></li>
+                <li><a href=""><i>■</i><em>[</em><span>休闲</span><em>]</em><small>翰茶缘（雍和宫店）</small></a></li>
+            </ul>
+        </div>
+        <div class="jiameng side_section">
+            <h2 class="side_section_title"><strong class="com_title"><span>COUPONS   </span><em>最新加盟</em></strong> <span
+                    class="more"></span></h2>
+            <ul class="tuijian_list wrap">
+                <li class="wrap">
+                    <a href="#"><img src="images/tuijian1.png" alt="推荐"/><span class="tuijian_flag"></span></a>
+                    <div>
+                        <h2>汉菜国际美食百汇</h2>
+                        <p><span>口味：</span>创意中餐</p>
+                        <p><span>区域：</span>朝阳/CBD</p>
+                    </div>
+                </li>
+                <li class="wrap">
+                    <a href="#"><img src="images/tuijian1.png" alt="推荐"/><span class="tuijian_flag"></span></a>
+                    <div>
+                        <h2>汉菜国际美食百汇</h2>
+                        <p><span>口味：</span>创意中餐</p>
+                        <p><span>区域：</span>朝阳/CBD</p>
+                    </div>
+                </li>
+            </ul>
+            <ul class="dinpu">
+                <li><a href=""><i>■</i><em>[</em><span>休闲</span><em>]</em><small>翰茶缘（雍和宫店）</small></a></li>
+                <li><a href=""><i>■</i><em>[</em><span>休闲</span><em>]</em><small>翰茶缘（雍和宫店）</small></a></li>
+                <li><a href=""><i>■</i><em>[</em><span>休闲</span><em>]</em><small>翰茶缘（雍和宫店）</small></a></li>
+                <li><a href=""><i>■</i><em>[</em><span>休闲</span><em>]</em><small>翰茶缘（雍和宫店）</small></a></li>
+                <li><a href=""><i>■</i><em>[</em><span>休闲</span><em>]</em><small>翰茶缘（雍和宫店）</small></a></li>
+                <li><a href=""><i>■</i><em>[</em><span>休闲</span><em>]</em><small>翰茶缘（雍和宫店）</small></a></li>
+                <li><a href=""><i>■</i><em>[</em><span>休闲</span><em>]</em><small>翰茶缘（雍和宫店）</small></a></li>
+                <li><a href=""><i>■</i><em>[</em><span>休闲</span><em>]</em><small>翰茶缘（雍和宫店）</small></a></li>
+            </ul>
+            <div class="overhidden"></div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
