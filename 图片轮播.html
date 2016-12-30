@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: none;
+        }
+
+        ul li {
+            list-style: none
+        }
+
+        .wrap {
+            width: 300px;
+            height: 132px;
+            overflow: hidden;
+            margin: 20px auto;
+            border: 1px solid black;
+        }
+
+        .img_big {
+            float: left;
+            position: relative;
+        }
+
+        .img_big li {
+            top: 0;
+            left: 0;
+            opacity: 0;
+            position: absolute;
+        }
+
+        .img_small {
+            float: right;
+        }
+
+        .img_small li {
+            width: 54px;
+            height: 32px;
+            margin: 3px 6px;
+            border: 4px solid #ffffff;
+        }
+
+        .img_small li.active {
+            border: 4px solid red;
+        }
+
+        .img_small li img {
+            width: 54px;
+            height: 32px;
+        }
+
+    </style>
+    <script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+    <script type="text/javascript" src="js/tween.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            (function () {
+                var oUlBig = $('.img_big');
+                var oUlSmall = $('.img_small');
+                var aLiBig = oUlBig.find('li');
+                aLiBig.eq(0).css('opacity', 1);
+                var aLiSmall = oUlSmall.find('li');
+                var iNow=0;
+                function moveImg() {
+                    iNow++;
+                    iNow = iNow > aLiBig.size()-1?0:iNow;
+                    //大图切换
+                    aLiBig.animate({opacity: 0}, 200, 'linear');
+                    aLiBig.eq(iNow).animate({opacity: 1}, 200, 'linear');
+                    //小图切换
+                    aLiSmall.attr('class','');
+                    aLiSmall.eq(iNow).addClass('active');
+                }
+                //开始轮播
+                var timer=setInterval(moveImg,3000);
+
+                /*鼠标经过暂停轮播*/
+                var oWrap = $('.wrap');
+                oWrap.mouseover(function () {
+                    clearInterval(timer);
+                }).mouseout(function () {
+                    timer=setInterval(moveImg,3000);
+                });
+
+                /*单击小图切换*/
+                aLiSmall.each(function (index) {
+                    $(this).click(function () {
+                        if (this.className=='active') {
+                            return;
+                        }
+                        aLiSmall.attr('class','');
+                        $(this).addClass('active');
+                        //大图切换
+                        iNow=index;
+                        aLiBig.animate({opacity: 0}, 200, 'linear');
+                        aLiBig.eq(iNow).animate({opacity: 1}, 200, 'linear');
+                    });
+                });
+            })();
+        });
+    </script>
+</head>
+<body>
+<div class="wrap">
+    <ul class="img_big">
+        <li><a href="#"><img src="images/img1.gif" alt=""/></a></li>
+        <li><a href="#"><img src="images/img2.gif" alt=""/></a></li>
+        <li><a href="#"><img src="images/img3.gif" alt=""/></a></li>
+    </ul>
+    <ul class="img_small">
+        <li  class="active"><img src="images/img1.gif" alt=""/></li>
+        <li><img src="images/img2.gif" alt=""/></li>
+        <li><img src="images/img3.gif" alt=""/></li>
+    </ul>
+</div>
+</body>
+</html>

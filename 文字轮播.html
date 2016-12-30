@@ -3,8 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: none;
+        }
+
+        .warp {
+            width: 800px;
+            height: 28px;
+            margin: 20px auto;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid black;
+        }
+
+        .warp ul {
+            width: 700px;
+            top: 0;
+            left: 20px;
+            position: absolute;
+        }
+
+        .warp ul li {
+            height: 18px;
+            font-size: 18px;
+            padding: 5px 0;
+            /*border:1px solid red;*/
+        }
+
+        .bt {
+            width: 100px;
+            height: 50px;
+            top: 0;
+            right: 0;
+            position: absolute;
+        }
+    </style>
+    <script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+    <script type="text/javascript" src="js/tween.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            (function () {
+                var aData = [
+                    '1111111111111111111111111111111111111111111111111',
+                    '2222222222222222222222222222222222222222222222222',
+                    '3333333333333333333333333333333333333333333333333',
+                    '4444444444444444444444444444444444444444444444444',
+                    '5555555555555555555555555555555555555555555555555'
+                ];
+                var str = '';
+                $.each(aData, function (key, val) {
+                    str += '<li>' + val + '</li>';
+                });
+                var oUl = $('.warp ul');
+                oUl.html(str);
+                var iNow = 0;
+                var iHeight = $('.warp ul li').outerHeight(true);
+                function moveLi(direct) {//direct=-1是bt_up
+                    iNow += direct;
+                    iNow=iNow<0?aData.length-1:iNow;
+                    iNow=iNow>aData.length-1?0:iNow;
+                    console.log(aData.length-1);
+                    console.log(iNow);
+                    oUl.stop().animate({top: -iNow * iHeight},1000,'elasticOut');
+                }
+                $('.bt_down').click(function () {
+                    moveLi(1);
+                });
+                setInterval(function () {
+                    moveLi(1);
+                },2600);
+            })();
+        });
+    </script>
 </head>
 <body>
+<div class="warp">
+    <ul>
 
+    </ul>
+    <div class="bt">
+        <span class="bt_up">▲</span>
+        <span class="bt_down">▼</span>
+    </div>
+</div>
 </body>
 </html>
